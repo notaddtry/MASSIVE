@@ -1,1 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <limits.h>
+#define vert 10
+#define horiz 7
+
+int main()
+
+{
+
+	int  a, cols,i, j,k,l;
+	int **massive1 = NULL;
+	int **massive2 = NULL;
+	int **massive3 = NULL;
+
+	massive1 = (int **)malloc(horiz * sizeof(int *));
+
+	for (i = 0; i < horiz; i++)
+	{
+		massive1[i] = (int *)malloc(vert * sizeof(int));
+	}
+
+	srand(time(NULL));			/* for random */
+
+	printf("\n Make some massives \n\n");
+
+	for (i = 0; i < horiz; i++)
+	{
+		for (j = 0; j < vert; j++)
+		{
+			massive1[i][j] = rand() % 10000;
+
+			printf("%d ", massive1[i][j]);
+		}
+		printf("\n\n");
+	}
+                                            /*Начало смены строк*/
+     for (j = 0; j < vert  ;j++)
+    {
+    k = massive1[0][j];
+    massive1[0][j] = massive1[7][j];
+    massive1[7][j] = k;
+    }
+                                            /*крашится программа,скорее всего на этом месте*/
+			printf("%d ", massive1[0][j]);
+			printf("%d ", massive1[horiz][j]);
+
+		printf("\n\n");
+
+	return(0);
+}
 
