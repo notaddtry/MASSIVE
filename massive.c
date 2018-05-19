@@ -9,7 +9,7 @@ int main()
 
 {
 
-	int  a, cols,i, j,m,e;
+	int  a, cols,i, j,m;
 	int **massive1 = NULL;
 	int **massive2 = NULL;
 	int **massive3 = NULL;
