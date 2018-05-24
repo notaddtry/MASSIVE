@@ -20,17 +20,13 @@ int main()
 
 
 
-	int  a, cols,i, j,m,c,x,y,k;
+	int  a, cols,i, j,m,c,x,y,k,glass1,glass2;
 
 	int **massive1 = NULL;
 
 	int **massive2 = NULL;
 
 	int **massive3 = NULL;
-
-    int glass1;
-
-    int glass2;
 
 
 
